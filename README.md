@@ -1,25 +1,24 @@
-# LeRobot-Claw: Embodied AI Agent (Qwen + LeRobot + Telegram) 🤖
+# Embodied AI Agent (Qwen + LeRobot + Telegram)
 
-🌐 **[English](#english-version)** | **[中文说明](#中文说明)**
+[English](#english-version) | [中文说明](#中文说明)
 
 ---
 
 <a id="english-version"></a>
-## 🇬🇧 English Version
+## English Version
 
 An Embodied AI Agent project built on Large Language/Vision Models (LLM/VLM) and the underlying robotic control framework.
 
-This Agent receives natural language commands via Telegram, utilizes **Qwen-VL** to perceive and recognize the current scene in the robot's field of view, employs the **Qwen-Plus** "brain" for task decomposition, and finally maps the planned action sequence into low-level terminal commands for **LeRobot (ACT policies)** to execute.
+This Agent receives natural language commands via Telegram, utilizes **Qwen-VL** to perceive and recognize the current scene in the robot's field of view, employs the **Qwen-Plus** "brain" for task decomposition, and finally maps the planned action sequence into low-level terminal commands for **LeRobot** to execute.
 
-### 🌟 Key Features
+### Key Features
 
-- **📱 Natural Language Interaction**: Integrated with a Telegram Bot, allowing you to send commands and receive real-time visual/textual feedback from the robot anywhere.
-- **👁 Scene Perception (Perception Layer)**: Integrated with the Qwen-VL Vision-Language Model to dynamically understand the environment and object locations.
-- **🧠 Action Planning (Cognition Layer)**: Zero-shot action decomposition based on LLMs, strictly outputting structured JSON policies.
-- **⚙ Action Execution (Execution Layer)**: Deep integration with the HuggingFace `lerobot` framework. Seamlessly calls ACT (Action Chunking with Transformers) inference policies via a configuration mapping table.
-- **🛡 Hardware-Software Decoupling**: Supports a "Mock" mode, allowing the complete Agent loop to be tested without physical robotic arms or cameras.
+- **Natural Language Interaction**: Integrated with a Telegram Bot, allowing you to send commands and receive real-time visual/textual feedback from the robot anywhere.
+- **Scene Perception (Perception Layer)**: Integrated with the Qwen-VL Vision-Language Model to dynamically understand the environment and object locations.
+- **Action Planning (Cognition Layer)**: Zero-shot action decomposition based on LLMs, strictly outputting structured JSON policies.
+- **Action Execution (Execution Layer)**: Deep integration with the HuggingFace `lerobot` framework. Seamlessly calls ACT (Action Chunking with Transformers) inference policies via a configuration mapping table.
 
-### 📁 Directory Structure
+### Directory Structure
 
 ```text
 embodied_qwen/
@@ -35,7 +34,7 @@ embodied_qwen/
     └── tg_bot.py               # Telegram Bot interface
 ```
 
-### 🛠 Prerequisites & Installation
+### Prerequisites & Installation
 
 1. **Base Environment**: Ubuntu 22.04 and Miniconda are highly recommended.
 2. **Install LeRobot**: Please refer to the official LeRobot documentation to install the base robotic framework.
@@ -52,7 +51,7 @@ conda activate lerobot
 pip install -r requirements.txt
 ```
 
-### 🚀 Quick Start
+### Quick Start
 
 1. Navigate to the `config/` directory, copy `config.yaml.example` and rename it to `config.yaml`.
 2. Fill in your DashScope API Key and Telegram Bot Token.
@@ -65,32 +64,31 @@ python main.py
 
 5. Open Telegram, find your Bot, and send a command like: *"Help me put the red cube into the box."*
 
-### 📝 Customizing the Policy Registry
+### Customizing the Policy Registry
 
 You can freely define the skills the LLM can call in `config/policy_registry.json`. Modify the `command` field to point to your custom trained LeRobot evaluation scripts.
 
-### 📄 License
+### License
 
 This project is licensed under the MIT License.
 
 ---
 
 <a id="中文说明"></a>
-## 🇨🇳 中文说明
+## 中文说明
 
-这是一个基于大语言模型/视觉大模型 (LLM/VLM) 和底层机器人控制框架构建的具身智能体 (Embodied AI Agent) 项目。
+这是一个基于大语言模型/视觉大模型 (LLM/VLM) 和底层机器人控制框架构建的具身智能体项目。
 
-该 Agent 能够通过 Telegram 接收自然语言指令，利用 **Qwen-VL** 观察并识别当前机器人视野中的场景，通过 **Qwen-Plus** 大脑进行任务动作拆解，最终将规划好的动作序列映射为 **LeRobot (ACT 策略)** 的底层终端指令并执行。
+该 Agent 能够通过 Telegram 接收自然语言指令，利用 **Qwen-VL** 观察并识别当前机器人视野中的场景，通过 **Qwen-Plus** 大脑进行任务动作拆解，最终将规划好的动作序列映射为 **LeRobot** 的底层终端指令并执行。
 
-### 🌟 核心特性
+### 核心特性
 
-- **📱 自然语言交互**：接入 Telegram Bot，随时随地发送指令并获取机器人状态和视觉反馈。
-- **👁 场景识别 (感知层)**：接入 Qwen-VL 视觉大模型，动态理解环境和物体相对位置。
-- **🧠 动作规划 (认知层)**：基于 LLM 的零样本动作拆解，严格输出结构化的 JSON 策略序列。
-- **⚙ 动作执行 (执行层)**：与 HuggingFace `lerobot` 框架深度集成，通过配置映射表无缝调用 ACT (Action Chunking with Transformers) 推理策略。
-- **🛡 软硬件解耦**：支持 Mock（模拟）模式，在无真实机械臂和相机硬件的情况下也能跑通完整 Agent 闭环。
+- **自然语言交互**：接入 Telegram Bot，随时随地发送指令并获取机器人状态和视觉反馈。
+- **场景识别 (感知层)**：接入 Qwen-VL 视觉大模型，动态理解环境和物体相对位置。
+- **动作规划 (认知层)**：基于 LLM 的零样本动作拆解，严格输出结构化的 JSON 策略序列。
+- **动作执行 (执行层)**：与 HuggingFace `lerobot` 框架深度集成，通过配置映射表无缝调用推理策略。
 
-### 📁 目录结构
+### 目录结构
 
 ```text
 embodied_qwen/
@@ -106,7 +104,7 @@ embodied_qwen/
     └── tg_bot.py               # Telegram 交互逻辑
 ```
 
-### 🛠 环境安装
+### 环境安装
 
 1. **基础环境**：强烈推荐使用 Ubuntu 22.04 和 Miniconda 进行环境隔离。
 2. **安装 LeRobot**：请参考 LeRobot 官方文档完成基础控制框架的安装和环境配置。
@@ -123,7 +121,7 @@ conda activate lerobot
 pip install -r requirements.txt
 ```
 
-### 🚀 快速启动
+### 快速启动
 
 1. 进入 `config/` 目录，将 `config.yaml.example` 复制并重命名为 `config.yaml`。
 2. 在文件中填入你的 DashScope API Key（阿里云百炼）和 Telegram Bot Token（BotFather）。
@@ -143,11 +141,11 @@ python main.py
 
 5. 打开 Telegram，向你的 Bot 发送自然语言指令，例如：*"帮我把红色的方块放进盒子里"*。
 
-### 📝 自定义底层策略 (Policy Registry)
+### 自定义底层策略 (Policy Registry)
 
 本项目的高度可扩展性体现在 `config/policy_registry.json` 中。你可以自由向 LLM 注册机器人的新技能，只需将 `command` 字段修改为你自己训练的 LeRobot 推理脚本即可实现无缝调用。
 
-### 📄 开源协议
+### 开源协议
 
 本项目采用 **MIT License** 开源协议。
 
