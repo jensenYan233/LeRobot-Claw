@@ -1,0 +1,8 @@
+# Qwen API 配置 (从阿里云百炼申请 DashScope 密钥)
+qwen_api_key: "YOUR_DASHSCOPE_API_KEY_HERE"
+
+# Telegram Bot Token (从 BotFather 获取)
+tg_bot_token: "YOUR_TELEGRAM_BOT_TOKEN_HERE"
+
+# 相机 ID (默认是0，根据硬件调整)
+camera_id: 0
