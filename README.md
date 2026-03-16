@@ -1,4 +1,4 @@
-# Embodied AI Agent (Qwen + LeRobot + Telegram) 🤖
+# LeRobot-Claw: Embodied AI Agent (Qwen + LeRobot + Telegram) 🤖
 
 🌐 **[English](#english-version)** | **[中文说明](#中文说明)**
 
