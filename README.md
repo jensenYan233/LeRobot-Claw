@@ -1,4 +1,4 @@
-# Embodied AI Agent (Qwen + LeRobot + Telegram)
+# LeRobot-Claw: Embodied AI Agent (Qwen + LeRobot + Telegram)
 
 [English](#english-version) | [中文说明](#中文说明)
 
@@ -42,8 +42,7 @@ embodied_qwen/
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd embodied_qwen
-
+cd LeRobot-Claw
 # Activate your lerobot conda environment
 conda activate lerobot
 
@@ -112,7 +111,7 @@ embodied_qwen/
 
 ```bash
 git clone https://github.com/你的用户名/你的项目名.git
-cd embodied_qwen
+cd LeRobot-Claw
 
 # 激活你原有的 lerobot conda 环境
 conda activate lerobot
