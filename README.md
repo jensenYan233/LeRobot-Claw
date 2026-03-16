@@ -21,7 +21,7 @@ This Agent receives natural language commands via Telegram, utilizes **Qwen-VL**
 ### Directory Structure
 
 ```text
-embodied_qwen/
+LeRobot-Claw/
 ├── main.py                     # Main entry point
 ├── config/
 │   ├── config.yaml.example     # Template for API keys (rename to config.yaml)
@@ -90,7 +90,7 @@ This project is licensed under the MIT License.
 ### 目录结构
 
 ```text
-embodied_qwen/
+LeRobot-Claw/
 ├── main.py                     # 主程序入口
 ├── config/
 │   ├── config.yaml.example     # 密钥配置模板 (运行前需重命名为 config.yaml)
